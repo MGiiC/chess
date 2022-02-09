@@ -69,6 +69,7 @@ game()
 
 
 
+# Test.
 # TO-DO
 # Test.
 # System to eliminate peices on moves.
