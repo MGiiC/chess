@@ -68,10 +68,7 @@ def game():
 game()
 
 
-
-# Test.
 # TO-DO
-# Test.
 # System to eliminate peices on moves.
 # System to show eliminated peices.
 # Sort eliminated peices by color.
