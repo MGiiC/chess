@@ -8,5 +8,6 @@ moves to see if the location specified is on the board and rejects if it is not.
 Currently working on breaking large functions down and optimizing them.
 
 -Next in line
+Print a prompt if a peice gets eliminated.
 Sorting the eliminated peices and grouping them by color.
 Checking to see if player moves are legal.
