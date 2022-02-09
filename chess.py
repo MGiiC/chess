@@ -1,11 +1,3 @@
-
-import time
-
-LAT_LIMIT = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', ]  # Sets board
-LONG_LIMIT = ['1', '2', '3', '4', '5', '6', '7', '8', ]  # boundaries.
-
-turn = 'White'  # Current player turn.
-
 the_board = {  # All board locations with peices stored as values.
     'a8': 'b_rook1', 'b8': 'b_knight1', 'c8': 'b_bishop1', 'd8': 'b_queen', 
     'e8': 'b_king', 'f8': 'b_bishop2', 'g8': 'b_knight2', 'h8': 'b_rook2', 
@@ -25,12 +17,25 @@ the_board = {  # All board locations with peices stored as values.
     'e1': 'w_king', 'f1': 'w_bishop2', 'g1': 'w_knight2', 'h1': 'w_rook2', 
 }
 
+LAT_LIMIT = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', ]   # Sets board
+LONG_LIMIT = ['1', '2', '3', '4', '5', '6', '7', '8', ]  # boundaries.
+
 eliminated = [
 ]
 
 
-def board_boundary_check(location):
-    for char in location:
+turn = 'White'  # Setting the starting turn to white.
+
+def turn_switch():  # Changes the current turn for the next function call.
+    global turn
+    if turn == 'White':
+        turn = 'Black'
+    else:
+        turn = 'White'
+
+
+def board_boundary_check(location):  # Checks the location input and verifies
+    for char in location:            # that it is within board limits.
         if location[0] not in LAT_LIMIT:
             print('Invalid entry. Enter a location between a1 and h8.')
             game()
@@ -58,10 +63,7 @@ def game():
     the_board[move_location] = peice_selection            # and asigning
     print(peice_selection + ' to ' + move_location + '.') # location
     print('Eliminated Peices : ', eliminated)
-    if turn == 'White':  # Changing current turn.
-        turn = 'Black'
-    else: 
-        turn = 'White'
+    turn_switch()
     game()
 
 

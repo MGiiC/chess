@@ -1,1 +1,12 @@
-Trying to create my own chess program, building from scratch.
+Trying to create my own chess program, building from scratch. So far I have a 
+working chess board that keeps track of all active peices. The elimination of 
+peices works and moves them to the eliminated list. Also the program checks all
+moves to see if the location specified is on the board and rejects if it is not.
+
+
+-Current goal
+Currently working on breaking large functions down and optimizing them.
+
+-Next in line
+Sorting the eliminated peices and grouping them by color.
+Checking to see if player moves are legal.
