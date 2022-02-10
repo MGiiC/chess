@@ -1,3 +1,4 @@
+
 the_board = {  # All board locations with peices stored as values.
     'a8': 'b_rook1', 'b8': 'b_knight1', 'c8': 'b_bishop1', 'd8': 'b_queen', 
     'e8': 'b_king', 'f8': 'b_bishop2', 'g8': 'b_knight2', 'h8': 'b_rook2', 
